@@ -6,7 +6,7 @@
 Arm::Arm()
 {
 	type = "Arm";
-	new_power = new double[2]; //Left and right arm power consumption
+	new_power = new double[2]; //Left and right arm energy consumption
 }
 
 Arm::~Arm()
