@@ -1,31 +1,51 @@
-#include "stdafx.h"
-#include "Arm.h"
+#include "arm.h"
 
+arm::arm() {
 
-//Set default
-Arm::Arm()
-{
-	type = "Arm";
-	new_power = new double[2]; //Left and right arm energy consumption
+	int newpartnumber = 0;
+	double newweight = 0;
+	double newcost = 0;
+	int newpower = 0;
 }
 
-Arm::~Arm()
-{
-	delete[] new_power;
+arm::arm(string name, int partnumber, string type, int power, double weight, double cost, string description) {
+	newname = name;
+	newpartnumber = partnumber;
+	newtype = type;
+	newpower = power;
+	newweight = weight;
+	newcost = cost;
+	newdescription = description;
 }
 
-void Arm::setPower(double* power)
-{
-	new_power[0] = power[0];
-	new_power[1] = power[1];
+arm::~arm() {
+
 }
 
-double* Arm::getPower()
-{
-	return new_power;
+string arm::getname() const {
+	return newname;
+}
+int arm::getpartnumber() const {
+
+	return newpartnumber;
+}
+string arm::gettype() const {
+	return newtype;
+}
+int arm::getpower() const {
+
+	return newpower;
+}
+double arm::getweight() const {
+
+	return newweight;
+}
+double arm::getcost() const {
+
+	return newcost;
+}
+string arm::getdescription() const {
+	return newdescription;
 }
 
-string Arm::getType()
-{
-	return type;
-}
+

@@ -1,34 +1,34 @@
-#pragma once
-#include <iostream>
-#include <string>
-using namespace std;
-
 #ifndef ARM_H
 #define ARM_H
 
+#include <iostream>
 
-class Arm
-{
+
+using namespace std;
+
+class arm {
 public:
-	//Default Constructor
-	Arm();
+	arm();
 
-	//Overload constructor
-	Arm(double*);
+	arm(string, int, string, int, double, double, string);
 
-	//Deconstructors
-	~Arm();
-
-	// Setter Function
-	void setPower(double*);
-
-	//Getter Function
-	double* getPower();
-	string getType();
+	~arm();
+	string getname() const;
+	int getpartnumber() const;
+	string gettype() const;
+	int getpower() const;
+	double getweight() const;
+	double getcost() const;
+	string getdescription() const;
 
 private:
-	double* new_power;
-	string type;
+	string newname;
+	int newpartnumber;
+	string newtype;
+	int newpower;
+	double newweight;
+	double newcost;
+	string newdescription;
 };
 
-#endif // !Arm_H
+#endif

@@ -1,35 +1,34 @@
-#pragma once
-#include <iostream>
-#include <string>
-using namespace std;
-
 #ifndef TORSO_H
 #define TORSO_H
 
+#include <iostream>
 
-class Torso
-{
+
+using namespace std;
+
+class torso {
 public:
-	//Default Constructor
-	Torso();
+	torso();
 
-	//Overload constructor
-	Torso(int);
+	torso(string, int, string, int, double, double, string);
 
-	//Deconstructors
-	~Torso();
-
-	// Setter Function
-	void setCompartments(int num_compart);
-	
-	//Getter Function
-	int getCompartments();
-	string getType();
-
+	~torso();
+	string getname() const;
+	int getpartnumber() const;
+	string gettype() const;
+	int getcompartment() const;
+	double getweight() const;
+	double getcost() const;
+	string getdescription() const;
 
 private:
-	int new_Compartments;
-	string Type;
+	string newname;
+	int newpartnumber;
+	string newtype;
+	int newbattery_compartment;
+	double newweight;
+	double newcost;
+	string newdescription;
 };
 
-#endif // !TORSO_H
+#endif

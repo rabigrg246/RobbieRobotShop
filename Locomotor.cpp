@@ -1,31 +1,57 @@
-#include "stdafx.h"
-#include "Locomotor.h"
+#include "locomotor.h"
 
-//Set default
-Locomotor::Locomotor()
-{
-	new_maxSpeed = 0.0;		
-	new_PowerConsumed = 0.0;
+locomotor::locomotor() {
+
+	int newpartnumber = 0;
+	double newweight = 0;
+	double newcost = 0;
+	int newspeed = 0;
+	int newpower = 0;
 }
 
-Locomotor::Locomotor(double maxSpeed)
-{
-	new_maxSpeed = maxSpeed;
+locomotor::locomotor(string name, int partnumber, string type, int speed,int power, double weight, double cost, string description) {
+	newname = name;
+	newpartnumber = partnumber;
+	newtype = type;
+	newspeed = speed;
+	newpower = power;
+	newweight = weight;
+	newcost = cost;
+	newdescription = description;
 }
 
-Locomotor::~Locomotor()
-{
-	
-}
-
-void Locomotor::setMaxSpeed(double maxSpeed)
-{
-	new_maxSpeed = maxSpeed;
-	
-}
-
-void Locomotor::setPowerConsumed(double power)
-{
-	new_PowerConsumed = power;
+locomotor::~locomotor() {
 
 }
+
+string locomotor::getname() const {
+	return newname;
+}
+int locomotor::getpartnumber() const {
+
+	return newpartnumber;
+}
+string locomotor::gettype() const {
+	return newtype;
+}
+int locomotor::getspeed() const {
+
+	return newspeed;
+}
+int locomotor::getpower() const {
+
+	return newpower;
+}
+double locomotor::getweight() const {
+
+	return newweight;
+}
+double locomotor::getcost() const {
+
+	return newcost;
+}
+string locomotor::getdescription() const {
+	return newdescription;
+}
+
+

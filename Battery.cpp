@@ -1,27 +1,51 @@
-#include "stdafx.h"
-#include "Battery.h"
+#include "battery.h"
 
+battery::battery() {
 
-//Set default
-Battery::Battery()
-{
-	type = "Battery";
-	new_energy = new double[3];
+	int newpartnumber = 0;
+	double newweight = 0;
+	double newcost = 0;
+	int newenergy = 0;
 }
 
-Battery::~Battery()
-{
-	delete[] new_energy;
+battery::battery(string name, int partnumber, string type, int energy, double weight, double cost, string description) {
+	newname = name;
+	newpartnumber = partnumber;
+	newtype = type;
+	newenergy = energy;
+	newweight = weight;
+	newcost = cost;
+	newdescription = description;
 }
 
-void Battery::setEnergy(double* energy)
-{
-	new_energy[0] = energy[0];
-	new_energy[1] = energy[1];
-	new_energy[2] = energy[2];
+battery::~battery() {
+
 }
 
-string Battery::getType()
-{
-	return type;
+string battery::getname() const {
+	return newname;
 }
+int battery::getpartnumber() const {
+
+	return newpartnumber;
+}
+string battery::gettype() const {
+	return newtype;
+}
+int battery::getenergy() const {
+
+	return newenergy;
+}
+double battery::getweight() const {
+
+	return newweight;
+}
+double battery::getcost() const {
+
+	return newcost;
+}
+string battery::getdescription() const {
+	return newdescription;
+}
+
+
