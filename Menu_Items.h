@@ -10,9 +10,9 @@ public:
 
 	void CreateMenu();
 	void LoginMenu();
-	void PMMenu();
-	void SAMenu();
-	void BCMenu();
+	void PMMenu(string, string, string);
+	void SAMenu(string, string, string);
+	void BCMenu(string, string);
 
 	
 	~Menu_Items();

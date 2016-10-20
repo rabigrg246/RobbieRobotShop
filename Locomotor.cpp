@@ -18,6 +18,16 @@ Locomotor::~Locomotor()
 	
 }
 
+double Locomotor::getMaxSpeed()
+{
+	return new_maxSpeed;
+}
+
+double Locomotor::getPowerConsumed()
+{
+	return new_PowerConsumed;
+}
+
 void Locomotor::setMaxSpeed(double maxSpeed)
 {
 	new_maxSpeed = maxSpeed;

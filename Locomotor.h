@@ -18,6 +18,10 @@ public:
 	//Deconstructors
 	~Locomotor();
 
+	//Getter Function
+	double getMaxSpeed();
+	double getPowerConsumed();
+
 	// Setter Function
 	void setMaxSpeed(double);
 	void setPowerConsumed(double);

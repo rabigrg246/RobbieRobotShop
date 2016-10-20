@@ -24,8 +24,7 @@ int main()
 
 		cout << "\t1. (N)ew Shop" << endl;
 		cout << "\t2. (L)og In As" << endl;
-		cout << "\t3. (R)eports" << endl;
-		cout << "\t4. (Q)uit" << endl;
+		cout << "\t3. (Q)uit" << endl;
 
 		cout << "\nEnter your choice: ";
 		cin >> ch;
@@ -43,9 +42,6 @@ int main()
 			Menu.LoginMenu();
 			break;
 
-		case 'R':
-			break;
-		
 		case 'Q':
 			exit(0);
 		}
