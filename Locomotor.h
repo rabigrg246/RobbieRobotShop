@@ -1,36 +1,34 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
 #ifndef LOCOMOTOR_H
 #define LOCOMOTOR_H
 
-#include <iostream>
 
-
-using namespace std;
-
-class locomotor {
+class Locomotor
+{
 public:
-	locomotor();
+	//Default Constructor
+	Locomotor();
+	
+	//Overload constructor
+	Locomotor(double);
 
-	locomotor(string,int,string,int,int,double,double,string);
+	//Deconstructors
+	~Locomotor();
 
-	~locomotor();
-	string getname() const;
-	int getpartnumber() const;
-	string gettype() const;
-	int getspeed() const;
-	int getpower() const;
-	double getweight() const;
-	double getcost() const;
-	string getdescription() const;
+	//Getter Function
+	double getMaxSpeed();
+	double getPowerConsumed();
+
+	// Setter Function
+	void setMaxSpeed(double);
+	void setPowerConsumed(double);
 
 private:
-	string newname;
-	int newpartnumber;
-	string newtype;
-	int newspeed;
-	int newpower;
-	double newweight;
-	double newcost;
-	string newdescription;
+	int new_maxSpeed;
+	int new_PowerConsumed;
 };
 
-#endif
+#endif // !LOCOMOTOR_H

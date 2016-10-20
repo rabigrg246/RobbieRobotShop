@@ -1,34 +1,33 @@
+#pragma once
+#include <iostream>
+#include <string>
+using namespace std;
+
 #ifndef BATTERY_H
 #define BATTERY_H
 
-#include <iostream>
 
-
-using namespace std;
-
-class battery {
+class Battery
+{
 public:
-	battery();
+	//Default Constructor
+	Battery();
 
-	battery(string, int, string, int, double, double, string);
+	//Overload constructor
+	Battery(double*);
 
-	~battery();
-	string getname() const;
-	int getpartnumber() const;
-	string gettype() const;
-	int getenergy() const;
-	double getweight() const;
-	double getcost() const;
-	string getdescription() const;
+	//Deconstructors
+	~Battery();
+
+	// Setter Function
+	void setEnergy(double*);
+	
+	//Getter Function
+	string getType();
 
 private:
-	string newname;
-	int newpartnumber;
-	string newtype;
-	int newenergy;
-	double newweight;
-	double newcost;
-	string newdescription;
+	double* new_energy;
+	string type;
 };
 
-#endif
+#endif // !BATTERY_H

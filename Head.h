@@ -1,32 +1,18 @@
-#ifndef HEAD_H
-#define HEAD_H
-
+#pragma once
 #include <iostream>
-
-
+#include<string>
 using namespace std;
 
-class head {
+class Head
+{
 public:
-	head();
+	Head();
+	~Head();
 
-	head(string, int, string, double, double, string);
-
-	~head();
-	string getname() const;
-	int getpartnumber() const;
-	string gettype() const;
-	double getweight() const;
-	double getcost() const;
-	string getdescription() const;
+	//Getter Function
+	string getType();
 
 private:
-	string newname;
-	int newpartnumber;
-	string newtype;
-	double newweight;
-	double newcost;
-	string newdescription;
+	string Type;
 };
 
-#endif

@@ -1,51 +1,34 @@
-#include "torso.h"
+#include "stdafx.h"
+#include "Torso.h"
 
-torso::torso() {
-
-	int newpartnumber = 0;
-	double newweight = 0;
-	double newcost = 0;
-	int newbattery_compartment = 0;
+//Set default
+Torso::Torso()
+{
+	new_Compartments = 1;
 }
 
-torso::torso(string name, int partnumber, string type, int battery_compartment, double weight, double cost, string description) {
-	newname = name;
-	newpartnumber = partnumber;
-	newtype = type;
-	newbattery_compartment = battery_compartment;
-	newweight = weight;
-	newcost = cost;
-	newdescription = description;
+Torso::Torso(int num_compart)
+{
+	new_Compartments = num_compart;
 }
 
-torso::~torso() {
+Torso::~Torso()
+{
 
 }
 
-string torso::getname() const {
-	return newname;
-}
-int torso::getpartnumber() const {
+void Torso::setCompartments(int num_compart)
+{
+	new_Compartments = num_compart;
 
-	return newpartnumber;
-}
-string torso::gettype() const {
-	return newtype;
-}
-int torso::getcompartment() const {
-
-	return newbattery_compartment;
-}
-double torso::getweight() const {
-
-	return newweight;
-}
-double torso::getcost() const {
-
-	return newcost;
-}
-string torso::getdescription() const {
-	return newdescription;
 }
 
+int Torso::getCompartments()
+{
+	return new_Compartments;
+}
 
+string Torso::getType()
+{
+	return Type;
+}
