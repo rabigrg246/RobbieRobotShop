@@ -34,6 +34,15 @@ void create_partCB(Fl_Window *g, void*);
 Fl_Window *dialog;
 Fl_Window *rm_dialog;
 Fl_Window *order_dialog;
+Fl_Window *brow;
+Fl_Box *box1;
+Fl_Box *box2;
+Fl_Box *box3;
+Fl_Box *box4;
+Fl_Box *box5;
+Fl_Box *box6;
+Fl_Box *box7;
+Fl_Box *box8;
 Fl_Input *rp_name;
 Fl_Input *rp_number;
 Fl_Input *rp_type;
@@ -342,57 +351,47 @@ void Button_View_Order(Fl_Widget *bc_win, void*)
 
 
 void Button_Browse(Fl_Window *bc_win, void*)
-{
-	Fl_Window *brow = new Fl_Window(800,600,"Browse Catalog");
+{         
+        brow = new Fl_Window(800,600,"Browse Catalog");
 	fl_register_images();
 
-	Fl_JPEG_Image robotone("robot1.jpg");
-	Fl_Button box1(410,10,100,100);
-	box1.image(robotone);
-	brow->end();
-	brow->show();
+        Fl_JPEG_Image *robot1 = new Fl_JPEG_Image("robot1.jpg");	
+        box1 = new Fl_Box(150,30,100,100);
+        box1->image(robot1);
+        
+        Fl_JPEG_Image *robot2 = new Fl_JPEG_Image("robot2.jpg");	
+        box2 = new Fl_Box(150,180,100,100);
+        box2->image(robot2);
 
-	Fl_JPEG_Image robotone1("robot2.jpg");
-	Fl_Button box2(110,110,100,100);
-	box2.image(robotone1);
-	brow->end();
-	brow->show();
+        Fl_JPEG_Image *robot3 = new Fl_JPEG_Image("robot3.jpg");	
+        box3 = new Fl_Box(150,330,100,100);
+        box3->image(robot3);
 
-	Fl_JPEG_Image robotone2("robot3.jpg");
-	Fl_Button box3(210,110,100,100);
-	box3.image(robotone2);
-	brow->end();
-	brow->show();
+        Fl_JPEG_Image *robot4 = new Fl_JPEG_Image("robot4.jpg");	
+        box4 = new Fl_Box(150,480,100,100);
+        box4->image(robot4);
+        
+        Fl_JPEG_Image *robot5 = new Fl_JPEG_Image("robot5.jpg");	
+        box5 = new Fl_Box(500,30,100,100);
+        box5->image(robot5);
+        
+        Fl_JPEG_Image *robot6 = new Fl_JPEG_Image("robot6.jpg");	
+        box6 = new Fl_Box(500,180,100,100);
+        box6->image(robot6);
 
-	Fl_JPEG_Image robotone3("robot4.jpg");
-	Fl_Button box4(310,110,100,100);
-	box4.image(robotone3);
-	brow->end();
-	brow->show();
+        Fl_JPEG_Image *robot7 = new Fl_JPEG_Image("robot7.jpg");	
+        box7 = new Fl_Box(500,330,100,100);
+        box7->image(robot7);
 
-	Fl_JPEG_Image robotone4("robot5.jpg");
-	Fl_Button box5(110,310,100,100);
-	box5.image(robotone4);
-	brow->end();
-	brow->show();
+        Fl_JPEG_Image *robot8 = new Fl_JPEG_Image("robot8.jpg");	
+        box8 = new Fl_Box(500,480,100,100);
+        box8->image(robot8);
+        
+brow->end();
+brow->show();
 
-	Fl_JPEG_Image robotone5("robot6.jpg");
-	Fl_Button box6(210,310,100,100);
-	box6.image(robotone5);
-	brow->end();
-	brow->show();
-
-	Fl_JPEG_Image robotone6("robot7.jpg");
-	Fl_Button box7(310,310,100,100);
-	box7.image(robotone6);
-	brow->end();
-	brow->show();
-
-	Fl_JPEG_Image robotone8("robot8.jpg");
-	Fl_Button box8(410,310,100,100);
-	box8.image(robotone8);
-	brow->end();
-	brow->show();
+	
+	
 };
 
 
@@ -457,7 +456,7 @@ void Button_Boss(Fl_Widget *win, void*)
 	
 	boss_win->end();
 
-	order->callback((Fl_Callback*) Button_Order);
+	order->callback((Fl_Callback*) Button_View_Order);
 	sales->callback((Fl_Callback*) Button_Bill);
 	boss_win->show();
 };
